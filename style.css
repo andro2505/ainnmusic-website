@@ -1,0 +1,395 @@
+section{
+    width:100%;
+}
+
+.hero-content,
+.about-section{
+
+    max-width:1500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0c0b0a;
+    color:#f5f2ee;
+    font-family:'Inter', sans-serif;
+}
+
+.hero{
+
+    min-height:92vh;
+
+    padding:40px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.82)
+    ),
+
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1800&auto=format&fit=crop");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+ .navbar{
+
+        position:fixed;
+    
+        top:0;
+        left:0;
+    
+        width:100%;
+    
+        z-index:1000;
+    
+        padding:28px 40px;
+    
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    
+        background:
+        linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,0)
+        );
+    
+        backdrop-filter:blur(10px);
+    }
+
+
+
+
+    .logo{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+
+.nav-links{
+
+    display:flex;
+    gap:40px;
+}
+
+.nav-links a{
+
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+
+    opacity:.85;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    opacity:1;
+}
+
+.hero-content{
+
+    margin-top:auto;
+    margin-bottom:90px;
+    padding-top:120px;
+    max-width:800px;
+}
+
+.hero-small{
+
+    color:#d8b37a;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+    font-size:13px;
+}
+
+h1{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:92px;
+
+    line-height:.92;
+
+    font-weight:500;
+
+    margin-bottom:30px;
+}
+
+.hero-text{
+
+    font-size:22px;
+
+    color:#d0cac2;
+
+    max-width:650px;
+
+    line-height:1.7;
+
+    margin-bottom:45px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+}
+
+.primary-btn{
+
+    background:white;
+    color:black;
+
+    padding:16px 30px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+
+    border:1px solid rgba(255,255,255,.2);
+
+    color:white;
+
+    padding:16px 30px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+
+    background:rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+    }
+
+    h1{
+
+        font-size:64px;
+    }
+
+    .hero-text{
+
+        font-size:18px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+}
+
+.about-section{
+    min-height:90vh;
+    padding:120px 40px;
+
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
+
+    background:#0c0b0a;
+}
+
+.section-label{
+    color:#d8b37a;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.about-text h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:72px;
+    line-height:.95;
+    font-weight:500;
+    margin-bottom:35px;
+    max-width:750px;
+}
+
+.about-text p{
+    color:#cfc7bd;
+    font-size:20px;
+    line-height:1.8;
+    max-width:720px;
+    margin-bottom:20px;
+}
+
+.about-card{
+    min-height:460px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:36px;
+    padding:35px;
+
+    background:
+    linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.02));
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap:14px;
+    background-image:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.75)
+),
+
+url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.about-card span{
+    display:inline-block;
+    width:max-content;
+
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;
+
+    padding:12px 18px;
+
+    color:#f5f2ee;
+    font-size:15px;
+}
+
+@media(max-width:900px){
+
+    .about-section{
+        grid-template-columns:1fr;
+        padding:90px 28px;
+        gap:40px;
+    }
+
+    .about-text h2{
+        font-size:48px;
+    }
+
+    .about-text p{
+        font-size:17px;
+    }
+
+    .about-card{
+        min-height:300px;
+    }
+}
+
+.weddings-section{
+    padding:120px 40px;
+    background:#f5f2ee;
+    color:#0c0b0a;
+}
+
+.weddings-heading{
+    max-width:1100px;
+    margin:0 auto 70px auto;
+}
+
+.weddings-heading h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:72px;
+    line-height:.95;
+    font-weight:500;
+    max-width:850px;
+}
+
+.wedding-grid{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.wedding-item{
+    border:1px solid rgba(0,0,0,.12);
+    border-radius:32px;
+    padding:34px;
+    min-height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.wedding-item span{
+    color:#b98b52;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.wedding-item h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px;
+    line-height:1;
+}
+
+.wedding-item p{
+    color:#4d4741;
+    font-size:17px;
+    line-height:1.7;
+}
+
+@media(max-width:900px){
+
+    .weddings-section{
+        padding:90px 28px;
+    }
+
+    .weddings-heading h2{
+        font-size:46px;
+    }
+
+    .wedding-grid{
+        grid-template-columns:1fr;
+    }
+
+    .wedding-item{
+        min-height:240px;
+    }
+}
