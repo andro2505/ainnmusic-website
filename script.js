@@ -33,3 +33,18 @@ function updateNavbarTheme() {
 
 window.addEventListener("scroll", updateNavbarTheme);
 window.addEventListener("load", updateNavbarTheme);
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+}

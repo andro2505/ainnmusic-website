@@ -520,3 +520,158 @@ button{
         object-position:center center;
     }
 }
+
+.menu-toggle{
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:18px;
+    height:2px;
+    background:white;
+    display:block;
+    border-radius:999px;
+}
+
+.navbar.light .menu-toggle{
+    border-color:rgba(0,0,0,.16);
+    background:rgba(0,0,0,.04);
+}
+
+.navbar.light .menu-toggle span{
+    background:#0c0b0a;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:82px;
+    right:20px;
+    z-index:999;
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    padding:18px;
+    min-width:190px;
+    border-radius:24px;
+    background:rgba(12,11,10,.88);
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(18px);
+}
+
+.mobile-menu.active{
+    display:flex;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    padding:10px 12px;
+}
+
+.about-card{
+    justify-content:flex-end;
+}
+
+.about-card-content{
+    max-width:340px;
+    padding:24px;
+    border-radius:26px;
+    background:rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(14px);
+}
+
+.about-card-content p{
+    color:#d8b37a;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.about-card-content h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    line-height:1;
+    font-weight:500;
+}
+
+.wedding-item{
+    background:linear-gradient(180deg,#fff,#f7f1e8);
+    box-shadow:0 18px 50px rgba(0,0,0,.08);
+}
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .hero{
+        background-position:35% center;
+    }
+
+    .hero::after{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:linear-gradient(
+            rgba(0,0,0,.18),
+            rgba(0,0,0,.72)
+        );
+        pointer-events:none;
+    }
+
+    .hero{
+        position:relative;
+    }
+
+    .navbar,
+    .hero-content{
+        position:relative;
+        z-index:2;
+    }
+
+    h1{
+        font-size:42px;
+        max-width:330px;
+    }
+
+    .hero-content{
+        margin-bottom:36px;
+    }
+
+    .about-card{
+        min-height:420px;
+        background-position:38% center;
+    }
+
+    .about-card-content{
+        padding:20px;
+    }
+
+    .about-card-content h3{
+        font-size:30px;
+    }
+
+    .wedding-item{
+        border-radius:28px;
+        padding:30px;
+    }
+}
