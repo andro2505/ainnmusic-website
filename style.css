@@ -1,19 +1,11 @@
-section{
-    width:100%;
-}
-
-.hero-content,
-.about-section{
-
-    max-width:1500px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -22,234 +14,154 @@ body{
     font-family:'Inter', sans-serif;
 }
 
+section{
+    width:100%;
+}
+
 .hero{
-
-    min-height:92vh;
-
+    min-height:100vh;
     padding:40px;
-
     background:
-    linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.82)
-    ),
-
-    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1800&auto=format&fit=crop");
-
+        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.78)),
+        url("images/ainn-hero.JPG");
     background-size:cover;
     background-position:center;
-
     display:flex;
     flex-direction:column;
 }
 
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.28);
+    backdrop-filter:blur(14px);
+    transition:.3s ease;
+}
 
- .navbar{
+.navbar.light{
+    background:rgba(245,242,238,.78);
+}
 
-        position:fixed;
-    
-        top:0;
-        left:0;
-    
-        width:100%;
-    
-        z-index:1000;
-    
-        padding:28px 40px;
-    
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    
-        background:
-        linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,0)
-        );
-    
-        backdrop-filter:blur(10px);
-    }
-
-
-
-
-    .logo{
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        letter-spacing: 1px;
-        font-weight: 600;
-    }
-
+.brand img{
+    height:72px;
+    width:auto;
+    display:block;
+    transition:.25s ease;
+}
 
 .nav-links{
-
     display:flex;
-    gap:40px;
+    gap:34px;
 }
 
 .nav-links a{
-
     color:white;
     text-decoration:none;
     font-size:15px;
-
-    opacity:.85;
-
+    font-weight:600;
+    opacity:.88;
     transition:.3s;
 }
 
-.nav-links a:hover{
+.navbar.light .nav-links a{
+    color:#0c0b0a;
+}
 
+.nav-links a:hover{
     opacity:1;
 }
 
 .hero-content{
-
+    max-width:850px;
     margin-top:auto;
     margin-bottom:90px;
-    padding-top:120px;
-    max-width:800px;
+    padding-top:130px;
 }
 
-.hero-small{
-
-    color:#d8b37a;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    margin-bottom:20px;
-
-    font-size:13px;
-}
-
-h1{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:92px;
-
-    line-height:.92;
-
-    font-weight:500;
-
-    margin-bottom:30px;
-}
-
-.hero-text{
-
-    font-size:22px;
-
-    color:#d0cac2;
-
-    max-width:650px;
-
-    line-height:1.7;
-
-    margin-bottom:45px;
-}
-
-.hero-buttons{
-
-    display:flex;
-    gap:18px;
-}
-
-.primary-btn{
-
-    background:white;
-    color:black;
-
-    padding:16px 30px;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.primary-btn:hover{
-
-    transform:translateY(-3px);
-}
-
-.secondary-btn{
-
-    border:1px solid rgba(255,255,255,.2);
-
-    color:white;
-
-    padding:16px 30px;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    backdrop-filter:blur(10px);
-
-    transition:.3s;
-}
-
-.secondary-btn:hover{
-
-    background:rgba(255,255,255,.08);
-}
-
-@media(max-width:900px){
-
-    .nav-links{
-
-        display:none;
-    }
-
-    h1{
-
-        font-size:64px;
-    }
-
-    .hero-text{
-
-        font-size:18px;
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-    }
-
-}
-
-.about-section{
-    min-height:90vh;
-    padding:120px 40px;
-
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:70px;
-    align-items:center;
-
-    background:#0c0b0a;
-}
-
+.hero-small,
 .section-label{
     color:#d8b37a;
     text-transform:uppercase;
     letter-spacing:3px;
     font-size:13px;
     margin-bottom:20px;
+    font-weight:600;
 }
 
-.about-text h2{
+h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:92px;
+    line-height:.92;
+    font-weight:500;
+    margin-bottom:30px;
+}
+
+.hero-text{
+    font-size:22px;
+    color:#e1dcd4;
+    max-width:650px;
+    line-height:1.7;
+    margin-bottom:45px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:16px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:white;
+    color:black;
+}
+
+.secondary-btn{
+    border:1px solid rgba(255,255,255,.25);
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-3px);
+}
+
+.about-section{
+    min-height:90vh;
+    padding:130px 40px;
+    max-width:1500px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
+    background:#0c0b0a;
+}
+
+.about-text h2,
+.weddings-heading h2,
+.gallery-text h2,
+.contact-content h2{
     font-family:'Cormorant Garamond', serif;
     font-size:72px;
     line-height:.95;
     font-weight:500;
     margin-bottom:35px;
-    max-width:750px;
 }
 
 .about-text p{
@@ -265,59 +177,27 @@ h1{
     border:1px solid rgba(255,255,255,.12);
     border-radius:36px;
     padding:35px;
-
     background:
-    linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.02));
-
+        linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.72)),
+        url("images/ainn-about.JPG");
+    background-size:cover;
+    background-position:center;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
     gap:14px;
-    background-image:
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.75)
-),
-
-url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop");
-
-background-size:cover;
-background-position:center;
-
+    overflow:hidden;
 }
 
 .about-card span{
-    display:inline-block;
     width:max-content;
-
-    border:1px solid rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.22);
     border-radius:999px;
-
     padding:12px 18px;
-
     color:#f5f2ee;
     font-size:15px;
-}
-
-@media(max-width:900px){
-
-    .about-section{
-        grid-template-columns:1fr;
-        padding:90px 28px;
-        gap:40px;
-    }
-
-    .about-text h2{
-        font-size:48px;
-    }
-
-    .about-text p{
-        font-size:17px;
-    }
-
-    .about-card{
-        min-height:300px;
-    }
+    font-weight:700;
+    backdrop-filter:blur(10px);
 }
 
 .weddings-section{
@@ -326,16 +206,16 @@ background-position:center;
     color:#0c0b0a;
 }
 
+.weddings-section .section-label{
+    color:#b98b52;
+}
+
 .weddings-heading{
     max-width:1100px;
     margin:0 auto 70px auto;
 }
 
 .weddings-heading h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:72px;
-    line-height:.95;
-    font-weight:500;
     max-width:850px;
 }
 
@@ -355,12 +235,14 @@ background-position:center;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    background:white;
 }
 
 .wedding-item span{
     color:#b98b52;
     font-size:14px;
     letter-spacing:2px;
+    font-weight:700;
 }
 
 .wedding-item h3{
@@ -375,14 +257,159 @@ background-position:center;
     line-height:1.7;
 }
 
+.gallery-section{
+    padding:130px 40px;
+    background:#0c0b0a;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+    max-width:1500px;
+    margin:0 auto;
+}
+
+.gallery-text p{
+    color:#cfc7bd;
+    font-size:20px;
+    line-height:1.8;
+    max-width:620px;
+}
+
+.gallery-image img{
+    width:100%;
+    height:620px;
+    object-fit:cover;
+    border-radius:36px;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.contact-section{
+    padding:120px 40px;
+    background:#0c0b0a;
+}
+
+.contact-content{
+    max-width:850px;
+    margin:0 auto;
+}
+
+.contact-content p{
+    color:#cfc7bd;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.contact-form{
+    display:grid;
+    gap:14px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:17px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.14);
+    background:#161310;
+    color:white;
+    font-size:16px;
+}
+
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+button{
+    padding:17px;
+    border-radius:999px;
+    border:none;
+    background:#d8b37a;
+    color:#0c0b0a;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.footer{
+    padding:32px 40px;
+    border-top:1px solid rgba(255,255,255,.1);
+    display:flex;
+    justify-content:space-between;
+    color:#cfc7bd;
+    background:#0c0b0a;
+}
+
 @media(max-width:900px){
 
-    .weddings-section{
-        padding:90px 28px;
+    .hero{
+        min-height:100vh;
+        padding:28px;
+        background-position:center;
     }
 
-    .weddings-heading h2{
+    .navbar{
+        padding:18px 28px;
+    }
+
+    .brand img{
+        height:54px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+        margin-bottom:55px;
+        padding-top:120px;
+    }
+
+    h1{
+        font-size:56px;
+    }
+
+    .hero-text{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        text-align:center;
+    }
+
+    .about-section,
+    .gallery-section{
+        grid-template-columns:1fr;
+        padding:90px 28px;
+        gap:45px;
+    }
+
+    .about-text h2,
+    .weddings-heading h2,
+    .gallery-text h2,
+    .contact-content h2{
         font-size:46px;
+    }
+
+    .about-text p,
+    .gallery-text p,
+    .contact-content p{
+        font-size:17px;
+    }
+
+    .about-card{
+        min-height:360px;
+    }
+
+    .weddings-section,
+    .contact-section{
+        padding:90px 28px;
     }
 
     .wedding-grid{
@@ -391,5 +418,15 @@ background-position:center;
 
     .wedding-item{
         min-height:240px;
+    }
+
+    .gallery-image img{
+        height:460px;
+    }
+
+    .footer{
+        flex-direction:column;
+        gap:10px;
+        padding:28px;
     }
 }

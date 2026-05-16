@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="sl">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AINN music | Andraž & Nuša</title>
+  <title>AINN Music | Andraž & Nuša</title>
 
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="hero" id="domov">
+  <header class="hero" id="domov" data-theme="dark">
 
     <nav class="navbar">
       <a href="#domov" class="brand">
-        <img src="images/logo-ainn.png" alt="AINN Music logo">
+        <img id="site-logo" src="images/logo-light.png" alt="AINN Music logo">
       </a>
 
       <div class="nav-links">
         <a href="#domov">Domov</a>
         <a href="#o-naju">O naju</a>
         <a href="#poroke">Poroke</a>
+        <a href="#galerija">Galerija</a>
         <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
@@ -47,7 +47,7 @@
 
   </header>
 
-  <section class="about-section" id="o-naju">
+  <section class="about-section" id="o-naju" data-theme="dark">
 
     <div class="about-text">
       <p class="section-label">O naju</p>
@@ -76,11 +76,10 @@
 
   </section>
 
-  <section class="weddings-section" id="poroke">
+  <section class="weddings-section" id="poroke" data-theme="light">
 
     <div class="weddings-heading">
       <p class="section-label">Poroke</p>
-
       <h2>Glasba za obred, sprejem in trenutke med njima.</h2>
     </div>
 
@@ -108,7 +107,23 @@
 
   </section>
 
-  <section class="contact-section" id="kontakt">
+  <section class="gallery-section" id="galerija" data-theme="dark">
+
+    <div class="gallery-text">
+      <p class="section-label">Galerija</p>
+      <h2>Trenutki z nastopov in priprav.</h2>
+      <p>
+        Izbrani utrinki, ki pokažejo najin glasbeni stil, energijo in pristnost nastopa.
+      </p>
+    </div>
+
+    <div class="gallery-image">
+      <img src="images/ainn-galerija1.jpg" alt="AINN Music nastop">
+    </div>
+
+  </section>
+
+  <section class="contact-section" id="kontakt" data-theme="dark">
 
     <div class="contact-content">
       <p class="section-label">Kontakt</p>
@@ -132,12 +147,11 @@
 
   </section>
 
-  <footer class="footer">
+  <footer class="footer" data-theme="dark">
     <p>AINN Music</p>
     <p>Andraž & Nuša</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
