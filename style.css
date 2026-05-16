@@ -581,3 +581,27 @@ button{
     padding:28px;
   }
 }
+
+@media(max-width:900px){
+
+  .hero{
+    background-image:
+      linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.86)),
+      url("images/ainn-hero.JPG");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center 115px;
+    background-color:#0c0b0a;
+  }
+
+  .about-section{
+    background-image:
+      linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.92)),
+      url("images/ainn-about.JPG");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center 120px;
+    background-color:#0c0b0a;
+  }
+}
+
