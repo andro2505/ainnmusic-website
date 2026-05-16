@@ -511,3 +511,111 @@
       padding:28px;
     }
   }
+  @media(max-width:900px){
+
+  .brand img{
+    height:78px;
+  }
+
+  .menu-toggle{
+    width:auto;
+    min-width:86px;
+    height:46px;
+    padding:0 14px;
+    flex-direction:row;
+    gap:10px;
+  }
+
+  .menu-toggle::before{
+    content:"Meni";
+    color:white;
+    font-size:14px;
+    font-weight:600;
+  }
+
+  .navbar.light .menu-toggle::before{
+    color:#0c0b0a;
+  }
+
+  .menu-toggle span{
+    width:16px;
+  }
+
+  .hero{
+    min-height:100vh;
+    background-position:58% center;
+  }
+
+  h1{
+    font-size:38px;
+    line-height:.95;
+    max-width:340px;
+  }
+
+  .hero-text{
+    font-size:16px;
+    max-width:340px;
+  }
+
+  .about-section{
+    display:block;
+    position:relative;
+    min-height:100vh;
+    padding:110px 28px 80px 28px;
+    background:
+      linear-gradient(
+        rgba(0,0,0,.76),
+        rgba(0,0,0,.88)
+      ),
+      url("images/ainn-about.JPG");
+    background-size:cover;
+    background-position:center;
+  }
+
+  .about-text{
+    max-width:100%;
+    position:relative;
+    z-index:2;
+  }
+
+  .about-card{
+    display:none;
+  }
+
+  .about-text h2,
+  .gallery-text h2,
+  .contact-content h2,
+  .performances-heading h2{
+    font-size:40px;
+    line-height:1;
+  }
+
+  .about-text p,
+  .gallery-text p,
+  .contact-content p{
+    font-size:16px;
+    line-height:1.65;
+  }
+
+  .gallery-section{
+    display:block;
+    padding:90px 28px;
+  }
+
+  .gallery-text h2{
+    max-width:320px;
+  }
+
+  .gallery-image{
+    margin-top:34px;
+    border-radius:30px;
+  }
+
+  .gallery-image img{
+    height:430px;
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+  }
+}
+  
