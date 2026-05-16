@@ -430,3 +430,28 @@ button{
         padding:28px;
     }
 }
+
+.hero{
+    background-position:center center;
+}
+
+.about-card{
+    background-position:center center;
+}
+
+@media(max-width:900px){
+
+    .hero{
+        background-position:42% center;
+    }
+
+    .about-card{
+        background-position:34% center;
+    }
+
+    .gallery-image img{
+        height:420px;
+        object-fit:cover;
+        object-position:center center;
+    }
+}
