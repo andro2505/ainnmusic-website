@@ -2,311 +2,360 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
+  }
+  
+  html{
     scroll-behavior:smooth;
-}
-
-body{
+  }
+  
+  body{
     background:#0c0b0a;
     color:#f5f2ee;
     font-family:'Inter', sans-serif;
-}
-
-section{
-    width:100%;
-}
-
-.hero{
+    overflow-x:hidden;
+  }
+  
+  .hero{
     min-height:100vh;
     padding:40px;
     background:
-        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.78)),
-        url("images/ainn-hero.JPG");
+      linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.78)),
+      url("images/ainn-hero.JPG");
     background-size:cover;
     background-position:center;
     display:flex;
     flex-direction:column;
-}
-
-.navbar{
+  }
+  
+  .navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    padding:18px 40px;
+    padding:16px 42px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.28);
-    backdrop-filter:blur(14px);
+    background:rgba(12,11,10,.86);
+    border-bottom:1px solid rgba(255,255,255,.06);
     transition:.3s ease;
-}
-
-.navbar.light{
-    background:rgba(245,242,238,.78);
-}
-
-.brand img{
-    height:72px;
+  }
+  
+  .navbar.light{
+    background:rgba(245,242,238,.96);
+    border-bottom:1px solid rgba(0,0,0,.08);
+  }
+  
+  .brand img{
+    height:96px;
     width:auto;
     display:block;
     transition:.25s ease;
-}
-
-.nav-links{
+  }
+  
+  .nav-links{
     display:flex;
+    align-items:center;
     gap:34px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #f5f1eb;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s ease;
+    opacity: 0.9;
 }
 
-.nav-links a{
+.nav-links a:hover {
+    opacity: 1;
+    color: #d6a663;
+}
+  .navbar.light .nav-links a{
+    color:#0c0b0a;
+  }
+  
+  .navbar.light .nav-links a:hover{
+    color:#b98b52;
+  }
+  
+  .menu-toggle{
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+  }
+  
+  .menu-toggle span{
+    width:18px;
+    height:2px;
+    background:white;
+    border-radius:999px;
+  }
+  
+  .navbar.light .menu-toggle{
+    border-color:rgba(0,0,0,.18);
+    background:rgba(0,0,0,.04);
+  }
+  
+  .navbar.light .menu-toggle span{
+    background:#0c0b0a;
+  }
+  
+  .mobile-menu{
+    position:fixed;
+    top:92px;
+    right:20px;
+    z-index:999;
+    display:none;
+    flex-direction:column;
+    gap:8px;
+    padding:18px;
+    min-width:220px;
+    border-radius:24px;
+    background:rgba(12,11,10,.94);
+    border:1px solid rgba(255,255,255,.14);
+  }
+  
+  .mobile-menu.active{
+    display:flex;
+  }
+  
+  .mobile-menu a{
     color:white;
     text-decoration:none;
-    font-size:15px;
-    font-weight:600;
-    opacity:.88;
-    transition:.3s;
-}
-
-.navbar.light .nav-links a{
-    color:#0c0b0a;
-}
-
-.nav-links a:hover{
-    opacity:1;
-}
-
-.hero-content{
-    max-width:850px;
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    padding:11px 12px;
+  }
+  
+  .hero-content{
+    max-width:900px;
     margin-top:auto;
-    margin-bottom:90px;
-    padding-top:130px;
-}
-
-.hero-small,
-.section-label{
+    margin-bottom:82px;
+    padding-top:150px;
+    position:relative;
+    z-index:2;
+  }
+  
+  .hero-small,
+  .section-label{
     color:#d8b37a;
     text-transform:uppercase;
     letter-spacing:3px;
     font-size:13px;
     margin-bottom:20px;
-    font-weight:600;
-}
-
-h1{
+    font-weight:800;
+  }
+  
+  h1{
     font-family:'Cormorant Garamond', serif;
-    font-size:92px;
+    font-size:94px;
     line-height:.92;
     font-weight:500;
     margin-bottom:30px;
-}
-
-.hero-text{
+  }
+  
+  .hero-text{
     font-size:22px;
-    color:#e1dcd4;
-    max-width:650px;
+    color:#e5ded7;
+    max-width:670px;
     line-height:1.7;
-    margin-bottom:45px;
-}
-
-.hero-buttons{
+    margin-bottom:42px;
+  }
+  
+  .hero-buttons{
     display:flex;
     gap:18px;
-}
-
-.primary-btn,
-.secondary-btn{
+  }
+  
+  .primary-btn,
+  .secondary-btn{
     padding:16px 30px;
     border-radius:999px;
     text-decoration:none;
-    font-weight:700;
+    font-family:'Inter', sans-serif;
+    font-weight:800;
     transition:.3s;
-}
-
-.primary-btn{
+  }
+  
+  .primary-btn{
     background:white;
     color:black;
-}
-
-.secondary-btn{
+  }
+  
+  .secondary-btn{
     border:1px solid rgba(255,255,255,.25);
     color:white;
-    backdrop-filter:blur(10px);
-}
-
-.primary-btn:hover,
-.secondary-btn:hover{
+  }
+  
+  .primary-btn:hover,
+  .secondary-btn:hover{
     transform:translateY(-3px);
-}
-
-.about-section{
-    min-height:90vh;
-    padding:130px 40px;
+  }
+ 
+  .about-section{
+    min-height:100vh;
+    padding:150px 42px;
     max-width:1500px;
     margin:0 auto;
     display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:70px;
+    grid-template-columns:1.05fr .95fr;
+    gap:90px;
     align-items:center;
     background:#0c0b0a;
-}
+  }
 
-.about-text h2,
-.weddings-heading h2,
-.gallery-text h2,
-.contact-content h2{
+  .about-card{
+    min-height:680px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:44px;
+    background:
+      linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.32)),
+      url("images/ainn-about.JPG");
+    background-size:cover;
+    background-position:center;
+  }
+
+  .about-text h2,
+  .performances-heading h2,
+  .gallery-text h2,
+  .contact-content h2{
     font-family:'Cormorant Garamond', serif;
-    font-size:72px;
+    font-size:74px;
     line-height:.95;
     font-weight:500;
     margin-bottom:35px;
-}
-
-.about-text p{
+    max-width:720px;
+    position:relative;
+    z-index:2;
+  }
+  
+  .about-text p,
+  .gallery-text p,
+  .contact-content p{
     color:#cfc7bd;
     font-size:20px;
     line-height:1.8;
-    max-width:720px;
+    max-width:730px;
     margin-bottom:20px;
-}
+  }
+  
 
-.about-card{
-    min-height:460px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:36px;
-    padding:35px;
-    background:
-        linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.72)),
-        url("images/ainn-about.JPG");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    gap:14px;
-    overflow:hidden;
-}
-
-.about-card span{
-    width:max-content;
-    border:1px solid rgba(255,255,255,.22);
-    border-radius:999px;
-    padding:12px 18px;
-    color:#f5f2ee;
-    font-size:15px;
-    font-weight:700;
-    backdrop-filter:blur(10px);
-}
-
-.weddings-section{
-    padding:120px 40px;
+  
+  .performances-section{
+    padding:120px 42px;
     background:#f5f2ee;
     color:#0c0b0a;
-}
-
-.weddings-section .section-label{
+  }
+  
+  .performances-section .section-label{
     color:#b98b52;
-}
-
-.weddings-heading{
-    max-width:1100px;
+  }
+  
+  .performances-heading{
+    max-width:1120px;
     margin:0 auto 70px auto;
-}
-
-.weddings-heading h2{
-    max-width:850px;
-}
-
-.wedding-grid{
-    max-width:1100px;
+  }
+  
+  .performances-heading h2{
+    max-width:880px;
+  }
+  
+  .performance-grid{
+    max-width:1120px;
     margin:0 auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-}
-
-.wedding-item{
-    border:1px solid rgba(0,0,0,.12);
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+  }
+  
+  .performance-item{
+    min-height:350px;
+    padding:32px;
     border-radius:32px;
-    padding:34px;
-    min-height:300px;
+    border:1px solid rgba(0,0,0,.10);
+    background:linear-gradient(180deg,#fff,#f7f1e8);
+    box-shadow:0 18px 50px rgba(0,0,0,.07);
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    background:white;
-}
-
-.wedding-item span{
+  }
+  
+  .performance-item span{
     color:#b98b52;
     font-size:14px;
     letter-spacing:2px;
-    font-weight:700;
-}
-
-.wedding-item h3{
+    font-weight:800;
+  }
+  
+  .performance-item h3{
     font-family:'Cormorant Garamond', serif;
     font-size:38px;
     line-height:1;
-}
-
-.wedding-item p{
+  }
+  
+  .performance-item p{
     color:#4d4741;
-    font-size:17px;
-    line-height:1.7;
-}
-
-.gallery-section{
-    padding:130px 40px;
+    font-size:16px;
+    line-height:1.65;
+  }
+  
+  .gallery-section{
+    padding:135px 42px;
     background:#0c0b0a;
     display:grid;
     grid-template-columns:.9fr 1.1fr;
-    gap:70px;
+    gap:76px;
     align-items:center;
     max-width:1500px;
     margin:0 auto;
-}
-
-.gallery-text p{
-    color:#cfc7bd;
-    font-size:20px;
-    line-height:1.8;
-    max-width:620px;
-}
-
-.gallery-image img{
+  }
+  
+  .gallery-image{
+    width:100%;
+    overflow:hidden;
+    border-radius:36px;
+    border:1px solid rgba(255,255,255,.12);
+  }
+  
+  .gallery-image img{
     width:100%;
     height:620px;
     object-fit:cover;
-    border-radius:36px;
-    border:1px solid rgba(255,255,255,.12);
-}
-
-.contact-section{
-    padding:120px 40px;
+    object-position:center;
+    display:block;
+  }
+  
+  .contact-section{
+    padding:120px 42px;
     background:#0c0b0a;
-}
-
-.contact-content{
+  }
+  
+  .contact-content{
     max-width:850px;
     margin:0 auto;
-}
-
-.contact-content p{
-    color:#cfc7bd;
-    font-size:20px;
-    line-height:1.7;
-    margin-bottom:35px;
-}
-
-.contact-form{
+  }
+  
+  .contact-form{
     display:grid;
     gap:14px;
-}
-
-input,
-textarea{
+    margin-top:34px;
+  }
+  
+  input,
+  textarea{
     width:100%;
     padding:17px;
     border-radius:16px;
@@ -314,14 +363,15 @@ textarea{
     background:#161310;
     color:white;
     font-size:16px;
-}
-
-textarea{
-    min-height:140px;
+    font-family:'Inter', sans-serif;
+  }
+  
+  textarea{
+    min-height:145px;
     resize:vertical;
-}
-
-button{
+  }
+  
+  button{
     padding:17px;
     border-radius:999px;
     border:none;
@@ -330,348 +380,134 @@ button{
     font-size:16px;
     font-weight:800;
     cursor:pointer;
-}
-
-.footer{
-    padding:32px 40px;
+  }
+  
+  .footer{
+    padding:32px 42px;
     border-top:1px solid rgba(255,255,255,.1);
     display:flex;
     justify-content:space-between;
     color:#cfc7bd;
     background:#0c0b0a;
-}
-
-@media(max-width:900px){
-
+  }
+  
+  @media(max-width:1200px){
+    .performance-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+  
+  @media(max-width:900px){
+  
     .hero{
-        min-height:100vh;
-        padding:28px;
-        background-position:center;
+      position:relative;
+      min-height:100vh;
+      padding:24px;
+      background-position:34% center;
     }
-
+  
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.78));
+      pointer-events:none;
+    }
+  
     .navbar{
-        padding:18px 28px;
+      padding:14px 24px;
     }
-
+  
     .brand img{
-        height:54px;
+      height:68px;
     }
-
+  
     .nav-links{
-        display:none;
+      display:none;
     }
-
+  
+    .menu-toggle{
+      display:flex;
+    }
+  
     .hero-content{
-        margin-bottom:55px;
-        padding-top:120px;
+      max-width:100%;
+      margin-bottom:34px;
+      padding-top:120px;
     }
-
+  
     h1{
-        font-size:56px;
+      font-size:42px;
+      line-height:.92;
+      max-width:340px;
     }
-
+  
     .hero-text{
-        font-size:18px;
+      font-size:16px;
+      line-height:1.55;
+      max-width:330px;
+      margin-bottom:28px;
     }
-
+  
+    .hero-small{
+      font-size:11px;
+      letter-spacing:2.4px;
+      max-width:330px;
+    }
+  
     .hero-buttons{
-        flex-direction:column;
+      flex-direction:column;
+      gap:12px;
     }
-
+  
     .primary-btn,
     .secondary-btn{
-        text-align:center;
-    }
-
-    .about-section,
-    .gallery-section{
-        grid-template-columns:1fr;
-        padding:90px 28px;
-        gap:45px;
+      width:100%;
+      max-width:330px;
+      text-align:center;
+      padding:14px 20px;
     }
 
     .about-text h2,
-    .weddings-heading h2,
+    .performances-heading h2,
     .gallery-text h2,
     .contact-content h2{
-        font-size:46px;
+      font-size:46px;
     }
-
+  
     .about-text p,
     .gallery-text p,
     .contact-content p{
-        font-size:17px;
+      font-size:17px;
     }
-
+  
     .about-card{
-        min-height:360px;
+        min-height:560px;
+        border-radius:34px;
+        background-position:center;
     }
-
-    .weddings-section,
+  
+    .performances-section,
     .contact-section{
-        padding:90px 28px;
+      padding:90px 28px;
     }
-
-    .wedding-grid{
-        grid-template-columns:1fr;
+  
+    .performance-grid{
+      grid-template-columns:1fr;
     }
-
-    .wedding-item{
-        min-height:240px;
+  
+    .performance-item{
+      min-height:260px;
+      padding:30px;
     }
-
+  
     .gallery-image img{
-        height:460px;
+      height:430px;
     }
-
+  
     .footer{
-        flex-direction:column;
-        gap:10px;
-        padding:28px;
+      flex-direction:column;
+      gap:10px;
+      padding:28px;
     }
-}
-
-.hero{
-    background-position:center center;
-}
-
-.about-card{
-    background-position:center center;
-}
-
-@media(max-width:900px){
-
-    .hero{
-        background-position:42% center;
-    }
-
-    .about-card{
-        background-position:34% center;
-    }
-
-    .gallery-image img{
-        height:420px;
-        object-fit:cover;
-        object-position:center center;
-    }
-}
-
-@media(max-width:900px){
-
-    .hero{
-        min-height:100vh;
-        padding:24px;
-        background-position:38% center;
-    }
-
-    .navbar{
-        padding:14px 24px;
-    }
-
-    .brand img{
-        height:42px;
-    }
-
-    .hero-content{
-        max-width:100%;
-        margin-bottom:42px;
-        padding-top:110px;
-    }
-
-    h1{
-        font-size:46px;
-        line-height:.92;
-        max-width:360px;
-    }
-
-    .hero-text{
-        font-size:16px;
-        line-height:1.55;
-        max-width:330px;
-        margin-bottom:28px;
-    }
-
-    .hero-small{
-        font-size:11px;
-        letter-spacing:2.4px;
-        max-width:330px;
-    }
-
-    .hero-buttons{
-        gap:12px;
-    }
-
-    .primary-btn,
-    .secondary-btn{
-        width:100%;
-        max-width:330px;
-        padding:14px 20px;
-        text-align:center;
-    }
-
-    .gallery-section{
-        overflow:hidden;
-    }
-
-    .gallery-image img{
-        width:100%;
-        height:420px;
-        object-fit:cover;
-        object-position:center center;
-    }
-}
-
-.menu-toggle{
-    display:none;
-    width:44px;
-    height:44px;
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:999px;
-    background:rgba(255,255,255,.06);
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    gap:6px;
-    cursor:pointer;
-}
-
-.menu-toggle span{
-    width:18px;
-    height:2px;
-    background:white;
-    display:block;
-    border-radius:999px;
-}
-
-.navbar.light .menu-toggle{
-    border-color:rgba(0,0,0,.16);
-    background:rgba(0,0,0,.04);
-}
-
-.navbar.light .menu-toggle span{
-    background:#0c0b0a;
-}
-
-.mobile-menu{
-    position:fixed;
-    top:82px;
-    right:20px;
-    z-index:999;
-    display:none;
-    flex-direction:column;
-    gap:10px;
-    padding:18px;
-    min-width:190px;
-    border-radius:24px;
-    background:rgba(12,11,10,.88);
-    border:1px solid rgba(255,255,255,.14);
-    backdrop-filter:blur(18px);
-}
-
-.mobile-menu.active{
-    display:flex;
-}
-
-.mobile-menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:700;
-    padding:10px 12px;
-}
-
-.about-card{
-    justify-content:flex-end;
-}
-
-.about-card-content{
-    max-width:340px;
-    padding:24px;
-    border-radius:26px;
-    background:rgba(0,0,0,.35);
-    border:1px solid rgba(255,255,255,.14);
-    backdrop-filter:blur(14px);
-}
-
-.about-card-content p{
-    color:#d8b37a;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:12px;
-    margin-bottom:10px;
-    font-weight:700;
-}
-
-.about-card-content h3{
-    font-family:'Cormorant Garamond', serif;
-    font-size:34px;
-    line-height:1;
-    font-weight:500;
-}
-
-.wedding-item{
-    background:linear-gradient(180deg,#fff,#f7f1e8);
-    box-shadow:0 18px 50px rgba(0,0,0,.08);
-}
-
-@media(max-width:900px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .menu-toggle{
-        display:flex;
-    }
-
-    .hero{
-        background-position:35% center;
-    }
-
-    .hero::after{
-        content:"";
-        position:absolute;
-        inset:0;
-        background:linear-gradient(
-            rgba(0,0,0,.18),
-            rgba(0,0,0,.72)
-        );
-        pointer-events:none;
-    }
-
-    .hero{
-        position:relative;
-    }
-
-    .navbar,
-    .hero-content{
-        position:relative;
-        z-index:2;
-    }
-
-    h1{
-        font-size:42px;
-        max-width:330px;
-    }
-
-    .hero-content{
-        margin-bottom:36px;
-    }
-
-    .about-card{
-        min-height:420px;
-        background-position:38% center;
-    }
-
-    .about-card-content{
-        padding:20px;
-    }
-
-    .about-card-content h3{
-        font-size:30px;
-    }
-
-    .wedding-item{
-        border-radius:28px;
-        padding:30px;
-    }
-}
+  }

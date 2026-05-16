@@ -17,7 +17,7 @@ function updateNavbarTheme() {
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
 
-    if (rect.top <= 90 && rect.bottom >= 90) {
+    if (rect.top <= 92 && rect.bottom >= 92) {
       currentTheme = section.dataset.theme;
     }
   });

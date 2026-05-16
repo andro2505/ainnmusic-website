@@ -6,10 +6,10 @@
   <title>AINN Music | Andraž & Nuša</title>
 
   <link rel="stylesheet" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,24 +21,24 @@
         <img id="site-logo" src="images/logo-light.png" alt="AINN Music logo">
       </a>
 
+      <div class="nav-links">
+        <a href="#domov">Domov</a>
+        <a href="#ainn">AINN</a>
+        <a href="#poroke-dogodki">Poroke & Dogodki</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+
       <button class="menu-toggle" id="menu-toggle" aria-label="Odpri meni">
         <span></span>
         <span></span>
       </button>
-
-      <div class="nav-links">
-        <a href="#domov">Domov</a>
-        <a href="#o-naju">O naju</a>
-        <a href="#poroke">Poroke</a>
-        <a href="#galerija">Galerija</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
     </nav>
 
     <div class="mobile-menu" id="mobile-menu">
       <a href="#domov">Domov</a>
-      <a href="#o-naju">O naju</a>
-      <a href="#poroke">Poroke</a>
+      <a href="#ainn">AINN</a>
+      <a href="#poroke-dogodki">Poroke & Dogodki</a>
       <a href="#galerija">Galerija</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -54,23 +54,24 @@
 
       <div class="hero-buttons">
         <a href="#kontakt" class="primary-btn">Preveri termin</a>
-        <a href="#poroke" class="secondary-btn">Več o nastopu</a>
+        <a href="#poroke-dogodki" class="secondary-btn">Več o nastopu</a>
       </div>
     </div>
 
   </header>
 
-  <section class="about-section" id="o-naju" data-theme="dark">
+  <section class="about-section" id="ainn" data-theme="dark">
 
     <div class="about-text">
-      <p class="section-label">O naju</p>
+    
+      <p class="section-label">AINN Music</p>
 
       <h2>Glasba, ki se prilagodi vajinemu trenutku.</h2>
 
       <p>
-        Sva Andraž in Nuša, glasbeni duo AINN Music. Ustvarjava elegantno,
-        toplo in čustveno glasbeno spremljavo za poroke, obrede, sprejeme
-        in posebne dogodke.
+        Sva Andraž in Nuša, glasbeni duo AINN Music. Z vokalom, kitaro in občutkom
+        za trenutek ustvarjava elegantno glasbeno spremljavo za poroke, obrede,
+        sprejeme in posebne dogodke.
       </p>
 
       <p>
@@ -79,42 +80,54 @@
         želita ustvariti.
       </p>
     </div>
-
-    <div class="about-card">
-      <div class="about-card-content">
-        <p>AINN Music</p>
-        <h3>Vokal, kitara in občutek za trenutek.</h3>
-      </div>
-    </div>
-
+    <div class="about-card"></div>
+   
   </section>
 
-  <section class="weddings-section" id="poroke" data-theme="light">
+  <section class="performances-section" id="poroke-dogodki" data-theme="light">
 
-    <div class="weddings-heading">
-      <p class="section-label">Poroke</p>
-      <h2>Glasba za obred, sprejem in trenutke med njima.</h2>
+    <div class="performances-heading">
+      <p class="section-label">Poroke & dogodki</p>
+      <h2>Glasba za trenutke, ki ostanejo.</h2>
     </div>
 
-    <div class="wedding-grid">
+    <div class="performance-grid">
 
-      <div class="wedding-item">
+      <article class="performance-item">
         <span>01</span>
-        <h3>Civilni obred</h3>
-        <p>Nežna glasbena spremljava za prihod, podpis in zaključek obreda.</p>
-      </div>
+        <h3>Poroke</h3>
+        <p>
+          Glasbena spremljava za civilne in cerkvene obrede, prihod po nevesto,
+          sprejeme gostov in druge čustvene trenutke poročnega dne.
+        </p>
+      </article>
 
-      <div class="wedding-item">
+      <article class="performance-item">
         <span>02</span>
-        <h3>Cerkvena poroka</h3>
-        <p>Izbrane skladbe za čustven, umirjen in svečan trenutek.</p>
-      </div>
+        <h3>Dogodki</h3>
+        <p>
+          Akustična glasba v živo za poslovne dogodke, otvoritve, večerje in
+          posebna druženja, kjer je pomembno prijetno vzdušje.
+        </p>
+      </article>
 
-      <div class="wedding-item">
+      <article class="performance-item">
         <span>03</span>
-        <h3>Sprejem gostov</h3>
-        <p>Elegantna akustična glasba za sproščeno vzdušje ob prihodu gostov.</p>
-      </div>
+        <h3>Rojstni dnevi</h3>
+        <p>
+          Topla in sproščena glasbena spremljava za praznovanja, kjer glasba
+          poveže goste in ustvari poseben večer.
+        </p>
+      </article>
+
+      <article class="performance-item">
+        <span>04</span>
+        <h3>Presenečenja</h3>
+        <p>
+          Osebni glasbeni nastopi za zaroke, obletnice in trenutke, ki jih želite
+          podariti nekomu posebnemu.
+        </p>
+      </article>
 
     </div>
 
@@ -148,8 +161,8 @@
       </p>
 
       <form class="contact-form">
-        <input type="text" placeholder="Ime in priimek">
-        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Ime in priimek" required>
+        <input type="email" placeholder="Email" required>
         <input type="text" placeholder="Datum dogodka">
         <input type="text" placeholder="Lokacija dogodka">
         <textarea placeholder="Kratek opis dogodka"></textarea>
