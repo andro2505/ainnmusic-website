@@ -65,7 +65,7 @@ if (slider && gallerySection) {
 
   const hint = document.createElement("div");
   hint.className = "gallery-swipe-hint";
-  hint.innerHTML = "Swipe za več →";
+  hint.innerHTML = "Swipe for more →";
 
   document.body.appendChild(prevBtn);
   document.body.appendChild(nextBtn);
