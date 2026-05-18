@@ -61,27 +61,28 @@ if (slider && gallerySection) {
   nextBtn.className = "gallery-nav-btn next";
   nextBtn.innerHTML = "›";
 
-  const hint = document.createElement("div");
-  hint.className = "gallery-swipe-hint";
-  hint.innerHTML = "Swipe za več →";
-
   gallerySection.appendChild(prevBtn);
   gallerySection.appendChild(nextBtn);
-  gallerySection.appendChild(hint);
+
+  const updateArrows = () => {
+    prevBtn.style.display = slider.scrollLeft <= 10 ? "none" : "flex";
+    nextBtn.style.display =
+      slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10
+        ? "none"
+        : "flex";
+  };
 
   prevBtn.addEventListener("click", () => {
-    slider.scrollBy({
-      left: -slider.clientWidth * 0.85,
-      behavior: "smooth"
-    });
+    slider.scrollBy({ left: -slider.clientWidth * 0.85, behavior: "smooth" });
   });
 
   nextBtn.addEventListener("click", () => {
-    slider.scrollBy({
-      left: slider.clientWidth * 0.85,
-      behavior: "smooth"
-    });
+    slider.scrollBy({ left: slider.clientWidth * 0.85, behavior: "smooth" });
   });
+
+  slider.addEventListener("scroll", updateArrows);
+  updateArrows();
+}
 
   slider.addEventListener("scroll", () => {
     hint.classList.add("hide");
