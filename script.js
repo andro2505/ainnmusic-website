@@ -48,3 +48,42 @@ if (menuToggle && mobileMenu) {
     });
   });
 }
+
+const slider = document.querySelector(".gallery-slider");
+const gallerySection = document.querySelector(".gallery-section");
+
+if (slider && gallerySection) {
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "gallery-nav-btn prev";
+  prevBtn.innerHTML = "‹";
+
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "gallery-nav-btn next";
+  nextBtn.innerHTML = "›";
+
+  const hint = document.createElement("div");
+  hint.className = "gallery-swipe-hint";
+  hint.innerHTML = "Swipe za več →";
+
+  gallerySection.appendChild(prevBtn);
+  gallerySection.appendChild(nextBtn);
+  gallerySection.appendChild(hint);
+
+  prevBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: -slider.clientWidth * 0.85,
+      behavior: "smooth"
+    });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: slider.clientWidth * 0.85,
+      behavior: "smooth"
+    });
+  });
+
+  slider.addEventListener("scroll", () => {
+    hint.classList.add("hide");
+  }, { once: true });
+}
