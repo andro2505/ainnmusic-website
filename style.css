@@ -626,3 +626,45 @@ button{
   scroll-snap-align:center;
   border:1px solid rgba(255,255,255,.12);
 }
+
+.gallery-slider-wrap{
+  position:relative;
+}
+
+.gallery-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+  width:54px;
+  height:54px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(12,11,10,.78);
+  color:white;
+  font-size:42px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+}
+
+.gallery-prev{
+  left:18px;
+}
+
+.gallery-next{
+  right:18px;
+}
+
+.gallery-arrow:hover{
+  background:rgba(255,255,255,.12);
+}
+
+@media(max-width:900px){
+  .gallery-arrow{
+    display:none;
+  }
+}
