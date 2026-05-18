@@ -56,35 +56,69 @@ if (slider && gallerySection) {
   const prevBtn = document.createElement("button");
   prevBtn.className = "gallery-nav-btn prev";
   prevBtn.innerHTML = "‹";
+  prevBtn.setAttribute("aria-label", "Prejšnja slika");
 
   const nextBtn = document.createElement("button");
   nextBtn.className = "gallery-nav-btn next";
   nextBtn.innerHTML = "›";
+  nextBtn.setAttribute("aria-label", "Naslednja slika");
 
-  gallerySection.appendChild(prevBtn);
-  gallerySection.appendChild(nextBtn);
+  const hint = document.createElement("div");
+  hint.className = "gallery-swipe-hint";
+  hint.innerHTML = "Swipe za več →";
 
-  const updateArrows = () => {
-    prevBtn.style.display = slider.scrollLeft <= 10 ? "none" : "flex";
-    nextBtn.style.display =
-      slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10
-        ? "none"
-        : "flex";
-  };
+  document.body.appendChild(prevBtn);
+  document.body.appendChild(nextBtn);
+  gallerySection.appendChild(hint);
+
+  function updateGalleryControls() {
+    const rect = slider.getBoundingClientRect();
+    const isMobile = window.innerWidth <= 900;
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isMobile || !isVisible) {
+      prevBtn.style.display = "none";
+      nextBtn.style.display = "none";
+      return;
+    }
+
+    const middleY = rect.top + rect.height / 2;
+
+    prevBtn.style.top = `${middleY}px`;
+    nextBtn.style.top = `${middleY}px`;
+
+    prevBtn.style.left = `${rect.left + 22}px`;
+    nextBtn.style.left = `${rect.right - 68}px`;
+
+    const atStart = slider.scrollLeft <= 10;
+    const atEnd = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10;
+
+    prevBtn.style.display = atStart ? "none" : "flex";
+    nextBtn.style.display = atEnd ? "none" : "flex";
+  }
 
   prevBtn.addEventListener("click", () => {
-    slider.scrollBy({ left: -slider.clientWidth * 0.85, behavior: "smooth" });
+    slider.scrollBy({
+      left: -slider.clientWidth * 0.85,
+      behavior: "smooth"
+    });
   });
 
   nextBtn.addEventListener("click", () => {
-    slider.scrollBy({ left: slider.clientWidth * 0.85, behavior: "smooth" });
+    slider.scrollBy({
+      left: slider.clientWidth * 0.85,
+      behavior: "smooth"
+    });
   });
-
-  slider.addEventListener("scroll", updateArrows);
-  updateArrows();
-}
 
   slider.addEventListener("scroll", () => {
     hint.classList.add("hide");
-  }, { once: true });
+    updateGalleryControls();
+  });
+
+  window.addEventListener("scroll", updateGalleryControls);
+  window.addEventListener("resize", updateGalleryControls);
+  window.addEventListener("load", updateGalleryControls);
+
+  updateGalleryControls();
 }
