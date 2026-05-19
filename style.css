@@ -819,6 +819,7 @@ button{
   }
 
   .booking-form-wrap iframe{
+     width:calc(100% + 18px);
     height:1350px;
   }
 }
