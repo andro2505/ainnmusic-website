@@ -230,16 +230,17 @@ h1{
 }
 
 .about-card{
-  min-height:680px;
+  min-height:760px;
   border:1px solid rgba(255,255,255,.12);
   border-radius:44px;
   background:
-    linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.32)),
+    linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.18)),
     url("images/ainn-about.JPG");
-  background-size:cover;
+  background-size:contain;
+  background-repeat:no-repeat;
   background-position:center;
+  background-color:#11100f;
 }
-
 /* TYPOGRAPHY SECTIONS */
 
 .about-text h2,
