@@ -487,7 +487,7 @@ button{
     min-height:100vh;
     padding:28px;
     background-image:
-      linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.86)),
+    linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.45)),
       url("images/ainn-hero.JPG");
     background-size:contain;
     background-repeat:no-repeat;
@@ -706,9 +706,10 @@ button{
     max-width:none !important;
     margin-left:calc(50% - 50vw) !important;
     margin-right:calc(50% - 50vw) !important;
+ 
 
     min-height:100vh !important;
-    padding:115px 28px 80px !important;
+    padding:55px 28px 70px 28px !important;
 
     display:block !important;
     position:relative !important;
