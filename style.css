@@ -814,12 +814,15 @@ button{
     font-size:16px;
   }
 
+
   .booking-form-wrap{
-    border-radius:24px;
+    display:flex;
+    justify-content:center;
+    overflow:hidden;
   }
 
   .booking-form-wrap iframe{
-     width:calc(100% + 18px);
-    height:1350px;
+    width:110%;
+    margin-left:-5%;
   }
 }
