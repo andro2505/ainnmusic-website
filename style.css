@@ -826,3 +826,129 @@ button{
     margin-left:-5%;
   }
 }
+
+.contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:42px;
+}
+
+.contact-details a{
+  color:#f5f2ee;
+  text-decoration:none;
+  font-size:20px;
+  transition:.25s;
+}
+
+.contact-details a:hover{
+  color:#d8b37a;
+}
+
+.social-links{
+  display:flex;
+  gap:18px;
+  margin-top:42px;
+  flex-wrap:wrap;
+}
+
+.social-links a{
+  color:#d8b37a;
+  text-decoration:none;
+  font-weight:700;
+  transition:.25s;
+}
+
+.social-links a:hover{
+  opacity:.7;
+}
+
+@media(max-width:900px){
+
+  .contact-details a{
+    font-size:17px;
+  }
+
+  .social-links{
+    gap:14px;
+  }
+
+}
+
+/* CONTACT FIX */
+
+.contact-section{
+  padding:80px 42px 120px 42px;
+}
+
+.contact-content{
+  max-width:850px;
+  margin:0 auto;
+}
+
+.contact-content .primary-btn{
+  display:inline-block;
+  margin-top:18px;
+  margin-bottom:34px;
+}
+
+.contact-details{
+  margin-top:0;
+  margin-bottom:38px;
+}
+
+.social-links{
+  margin-top:0;
+}
+
+/* manj črnine med galerijo in kontaktom */
+.gallery-section{
+  padding-bottom:80px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .gallery-section{
+    padding-bottom:55px;
+  }
+
+  .contact-section{
+    padding:55px 28px 90px 28px;
+  }
+
+  .contact-content .primary-btn{
+    margin-top:18px;
+    margin-bottom:30px;
+  }
+
+  .contact-details{
+    gap:12px;
+    margin-bottom:36px;
+  }
+
+  .social-links{
+    margin-top:0;
+  }
+}
+
+@media(min-width:901px){
+  .contact-section{
+    padding-top:20px;
+  }
+
+  .contact-content{
+    max-width:1120px;
+    margin:0 auto;
+    padding-left:0;
+  }
+
+  .contact-content h2,
+  .contact-content p,
+  .contact-content .section-label,
+  .contact-content .primary-btn,
+  .contact-details,
+  .social-links{
+    margin-left:0;
+  }
+}
