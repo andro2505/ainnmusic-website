@@ -230,9 +230,9 @@ h1{
 }
 
 .about-card{
-  min-height:760px;
+  min-height:790px;
   border:1px solid rgba(255,255,255,.12);
-  border-radius:44px;
+  border-radius:60px;
   background:
     linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.18)),
     url("images/ainn-about.JPG");
