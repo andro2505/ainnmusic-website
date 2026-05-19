@@ -230,16 +230,19 @@ h1{
 }
 
 .about-card{
-  min-height:790px;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:60px;
-  background:
+    min-height:760px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:44px;
+
+    background:
     linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.18)),
-    url("images/ainn-about.JPG");
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-color:#11100f;
+    url("images/ainn-about-desktop.JPG");
+
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    overflow:hidden;
 }
 /* TYPOGRAPHY SECTIONS */
 
@@ -636,5 +639,110 @@ button{
     flex-direction:column;
     gap:10px;
     padding:28px;
+  }
+}
+
+
+@media (max-width:768px){
+
+  .about-section{
+    width:100vw !important;
+    max-width:none !important;
+    margin-left:calc(50% - 50vw) !important;
+    margin-right:calc(50% - 50vw) !important;
+
+    min-height:100vh !important;
+    padding:0 !important;
+
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    position:relative !important;
+    overflow:hidden !important;
+  }
+
+ .about-card{
+    position:absolute !important;
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    background:
+      linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
+      url("images/ainn-about-mobile.JPG");
+
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+
+    z-index:0 !important;
+}
+
+  .about-text{
+    position:relative !important;
+    z-index:2 !important;
+
+    padding:95px 28px 70px !important;
+    max-width:none !important;
+  }
+
+  .about-text h2{
+    font-size:42px !important;
+    line-height:1.05 !important;
+    max-width:360px !important;
+  }
+
+  .about-text p{
+    font-size:17px !important;
+    line-height:1.65 !important;
+    max-width:350px !important;
+  }
+}
+
+@media (max-width:768px){
+
+  .about-section{
+    width:100vw !important;
+    max-width:none !important;
+    margin-left:calc(50% - 50vw) !important;
+    margin-right:calc(50% - 50vw) !important;
+
+    min-height:100vh !important;
+    padding:115px 28px 80px !important;
+
+    display:block !important;
+    position:relative !important;
+    overflow:hidden !important;
+
+    background:
+      linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.82)),
+      url("images/ainn-about-mobile.JPG") !important;
+
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+
+  .about-card{
+    display:none !important;
+  }
+
+  .about-text{
+    position:relative !important;
+    z-index:2 !important;
+    max-width:100% !important;
+    padding:0 !important;
+  }
+
+  .about-text h2{
+    font-size:42px !important;
+    line-height:1.05 !important;
+    max-width:360px !important;
+  }
+
+  .about-text p{
+    font-size:17px !important;
+    line-height:1.65 !important;
+    max-width:350px !important;
   }
 }
