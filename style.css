@@ -1,3 +1,10 @@
+@font-face{
+    font-family:"Cyrillic Bodoni";
+    src:url("fonts/CyrillicBodoni.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal;
+}
+
 *{
   margin:0;
   padding:0;
