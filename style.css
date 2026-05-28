@@ -1398,3 +1398,14 @@ button{
   font-family:'Inter', sans-serif;
   font-weight:400 !important;
 }
+
+
+.custom-booking-form select.placeholder-select{
+  color:rgba(245,242,238,.58) !important;
+  font-weight:400 !important;
+}
+
+.custom-booking-form select.placeholder-select option{
+  color:#0c0b0a;
+  font-weight:400;
+}
