@@ -21,25 +21,57 @@
     <section class="booking-hero">
       <p class="section-label">Povpraševanje</p>
 
-      <h1>Preverita prost termin.</h1>
+      <h1>Preveri prost termin.</h1>
 
       <p>
-        Izpolnita kratek obrazec in preverila bova, ali sva na vajin datum še prosta.
+        Izpolni kratek obrazec in preverila bova, ali sva na tvoj datum še prosta.
         Odgovoriva v najkrajšem možnem času.
       </p>
     </section>
 
-    <section class="booking-form-wrap">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSe8dcDhBDvLTT3BJCoNvXIO0bWfDxnZ-911Qn-gwAdFc7n-hw/viewform?embedded=true"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Nalaganje …
-      </iframe>
-    </section>
+    <form class="custom-booking-form" id="booking-form">
+
+      <input type="text" name="name" placeholder="Ime in priimek *" required>
+      <input type="email" name="email" placeholder="E-poštni naslov *" required>
+      <input type="tel" name="phone" placeholder="Kontaktna telefonska številka *" required>
+      <input type="text" name="date" placeholder="Datum dogodka *" required>
+      <input type="text" name="location" placeholder="Lokacija dogodka *" required>
+
+      <select name="event_type" required>
+        <option value="">Tip dogodka *</option>
+        <option>Poroka</option>
+        <option>Civilni obred</option>
+        <option>Cerkveni obred</option>
+        <option>Zasebno praznovanje</option>
+        <option>Javni dogodek</option>
+        <option>Pogreb</option>
+        <option>Drugi</option>
+      </select>
+
+      <input type="text" name="other_event" placeholder="Če ste izbrali drugo, napišite">
+
+      <textarea name="mood" placeholder="Kakšno glasbeno vzdušje si želite za vaš dogodek?"></textarea>
+
+      <select name="duration">
+        <option value="">Okvirno trajanje glasbenega nastopa</option>
+        <option>1–3 pesmi</option>
+        <option>do 30 minut</option>
+        <option>30–60 minut</option>
+        <option>več kot 1 uro</option>
+        <option>Še nisem prepričan/a</option>
+      </select>
+
+      <textarea name="message" placeholder="Dodatne želje ali vprašanja"></textarea>
+
+      <button type="submit">Pošlji povpraševanje</button>
+
+      <p class="booking-status" id="booking-status"></p>
+
+    </form>
 
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>
