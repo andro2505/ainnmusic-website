@@ -1282,3 +1282,72 @@ button{
     display:block;
   }
 }
+
+/* CUSTOM BOOKING FORM */
+
+.custom-booking-form{
+  max-width:760px;
+  margin:0 auto 80px auto;
+  display:grid;
+  gap:16px;
+}
+
+.custom-booking-form input,
+.custom-booking-form select,
+.custom-booking-form textarea{
+  width:100%;
+  padding:18px 20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.16);
+  background:#161310;
+  color:#f5f2ee;
+  font-family:'Inter', sans-serif;
+  font-size:16px;
+  outline:none;
+}
+
+.custom-booking-form input::placeholder,
+.custom-booking-form textarea::placeholder{
+  color:rgba(245,242,238,.58);
+}
+
+.custom-booking-form select{
+  appearance:none;
+}
+
+.custom-booking-form textarea{
+  min-height:135px;
+  resize:vertical;
+}
+
+.custom-booking-form input:focus,
+.custom-booking-form select:focus,
+.custom-booking-form textarea:focus{
+  border-color:#d8b37a;
+}
+
+.custom-booking-form button{
+  margin-top:10px;
+  padding:18px 24px;
+  border-radius:999px;
+  border:none;
+  background:#d8b37a;
+  color:#0c0b0a;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.booking-status{
+  color:#d8b37a;
+  font-size:15px;
+  line-height:1.5;
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+  .custom-booking-form{
+    max-width:100%;
+    margin-bottom:60px;
+  }
+}
