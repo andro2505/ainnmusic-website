@@ -1377,3 +1377,19 @@ button{
   color:#0c0b0a;
   background:#f5f2ee;
 }
+
+.booking-note{
+  max-width:760px;
+  margin:0 auto 18px auto;
+  color:rgba(245,242,238,.62);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.custom-booking-form select{
+  font-weight:400;
+}
+
+.custom-booking-form select option{
+  font-weight:400;
+}
