@@ -1393,3 +1393,8 @@ button{
 .custom-booking-form select option{
   font-weight:400;
 }
+
+.custom-booking-form select{
+  font-family:'Inter', sans-serif;
+  font-weight:400 !important;
+}
