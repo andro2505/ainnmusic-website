@@ -1619,3 +1619,214 @@ button{
     margin-bottom:60px;
   }
 }
+
+/* BOOKING PAGE CUSTOM */
+
+.booking-page{
+  position:relative;
+  min-height:100vh;
+  background:#0c0b0a;
+  color:#f5f2ee;
+  padding:40px;
+  overflow:hidden;
+}
+
+.booking-page::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:560px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12,11,10,.94) 0%,
+      rgba(12,11,10,.78) 44%,
+      rgba(12,11,10,.35) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12,11,10,.12) 0%,
+      rgba(12,11,10,.96) 100%
+    ),
+    url("images/ainn-booking-bg.jpg");
+  background-size:cover;
+  background-position:center 25%;
+  background-repeat:no-repeat;
+  opacity:.82;
+  z-index:0;
+}
+
+.booking-back,
+.booking-hero,
+.booking-note,
+.custom-booking-form{
+  position:relative;
+  z-index:2;
+}
+
+.booking-back{
+  display:inline-block;
+  color:#d8b37a;
+  text-decoration:none;
+  margin-bottom:70px;
+  font-weight:700;
+}
+
+.booking-hero{
+  max-width:900px;
+  margin:0 auto 48px auto;
+}
+
+.booking-hero h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:84px;
+  line-height:.95;
+  font-weight:500;
+  margin-bottom:28px;
+}
+
+.booking-hero p{
+  color:#d9d1c8;
+  font-size:20px;
+  line-height:1.7;
+  max-width:720px;
+}
+
+.booking-note{
+  max-width:760px;
+  margin:0 auto 34px auto;
+  color:rgba(245,242,238,.62);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.custom-booking-form{
+  max-width:760px;
+  margin:0 auto 80px auto;
+  display:grid;
+  gap:16px;
+}
+
+.custom-booking-form input,
+.custom-booking-form select,
+.custom-booking-form textarea{
+  width:100%;
+  padding:18px 20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.16);
+  background:#161310;
+  color:#f5f2ee;
+  font-family:'Inter', sans-serif;
+  font-size:16px;
+  font-weight:400 !important;
+  outline:none;
+}
+
+.custom-booking-form input::placeholder,
+.custom-booking-form textarea::placeholder{
+  color:rgba(245,242,238,.58);
+}
+
+.custom-booking-form textarea{
+  min-height:135px;
+  resize:vertical;
+}
+
+.custom-booking-form input:focus,
+.custom-booking-form select:focus,
+.custom-booking-form textarea:focus{
+  border-color:#d8b37a;
+}
+
+.custom-booking-form select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #d8b37a 50%),
+    linear-gradient(135deg, #d8b37a 50%, transparent 50%);
+  background-position:
+    calc(100% - 26px) 50%,
+    calc(100% - 18px) 50%;
+  background-size:
+    8px 8px,
+    8px 8px;
+  background-repeat:no-repeat;
+  padding-right:54px;
+  cursor:pointer;
+}
+
+.custom-booking-form select:invalid,
+.custom-booking-form select.placeholder-select{
+  color:rgba(245,242,238,.58) !important;
+  font-weight:400 !important;
+}
+
+.custom-booking-form select option{
+  color:#0c0b0a;
+  background:#f5f2ee;
+  font-weight:400;
+}
+
+.custom-booking-form button{
+  margin-top:10px;
+  padding:18px 24px;
+  border-radius:999px;
+  border:none;
+  background:#d8b37a;
+  color:#0c0b0a;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.booking-status{
+  color:#d8b37a;
+  font-size:15px;
+  line-height:1.5;
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+
+  .booking-page{
+    padding:28px;
+  }
+
+  .booking-page::before{
+    height:520px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(12,11,10,.45) 0%,
+        rgba(12,11,10,.78) 48%,
+        rgba(12,11,10,.98) 100%
+      ),
+      url("images/ainn-booking-bg.jpg");
+    background-size:cover;
+    background-position:center top;
+    opacity:.86;
+  }
+
+  .booking-back{
+    margin-bottom:54px;
+  }
+
+  .booking-hero{
+    margin-bottom:42px;
+  }
+
+  .booking-hero h1{
+    font-size:46px;
+  }
+
+  .booking-hero p{
+    font-size:16px;
+  }
+
+  .custom-booking-form{
+    max-width:100%;
+    margin-bottom:60px;
+  }
+}
