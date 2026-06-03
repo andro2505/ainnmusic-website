@@ -29,10 +29,12 @@ body{
   min-height:100vh;
   padding:40px;
   background:
-    linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.78)),
-    url("images/ainn-hero.JPG");
+    linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.56) 42%, rgba(0,0,0,.28) 100%),
+    linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.68)),
+    url("images/ainn-hero-desktop.JPG");
   background-size:cover;
-  background-position:center 35%;
+  background-position:center center;
+  background-repeat:no-repeat;
   display:flex;
   flex-direction:column;
 }
@@ -490,17 +492,21 @@ button{
     right:28px;
   }
 
+ @media(max-width:900px){
+
   .hero{
     min-height:100vh;
     padding:28px;
-    background-image:
-    linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.45)),
-      url("images/ainn-hero.JPG");
-    background-size:contain;
+    background:
+      linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.82)),
+      url("images/ainn-hero-mobile.JPG");
+    background-size:cover;
+    background-position:center center;
     background-repeat:no-repeat;
-    background-position:center 115px;
     background-color:#0c0b0a;
   }
+
+}
 
   .hero-content{
     max-width:100%;
