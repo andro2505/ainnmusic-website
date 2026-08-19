@@ -31,7 +31,7 @@ body{
   background:
     linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.56) 42%, rgba(0,0,0,.28) 100%),
     linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.68)),
-    url("images/ainn-hero-desktop.JPG");
+    url("images/ainn-hero-desktop.jpeg");
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
